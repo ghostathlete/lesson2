@@ -13,5 +13,6 @@ if (number >= 100 && number < 1000)
 {
     int result = number / 100;
     int result2 = number / 10 % 10;
-    System.Console.WriteLine($"Вторая цифра случайного числа стерта! {result} {result2}");
+    int answer = result * 10 + result2;
+    System.Console.WriteLine($"Вторая цифра случайного числа стерта! {answer}");
 }
