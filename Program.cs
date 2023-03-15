@@ -6,14 +6,24 @@
 
 
 
-Random rnd = new Random();
-int number =rnd.Next(100, 1000);
-System.Console.WriteLine(number);
+int Prompt(string message)
+{
+    System.Console.Write($"{message} >");
+    int answer = Convert.ToInt32(Console.ReadLine());
+    return answer;
+}
 
+int number = Prompt("Введите число");
+while (number >= 1000)
+{
+    number = number / 10;
+}
 if (number >= 100 && number < 1000)
 {
-    int result = number / 100;
-    int result2 = number / 10 % 10;
-    int answer = result * 10 + result2;
-    System.Console.WriteLine($"Вторая цифра случайного числа стерта! {answer}");
+    int result = number % 10;
+    System.Console.WriteLine($"третья цифра введенного 
+}
+else
+{
+    System.Console.WriteLine("третьей цифры нет");
 }
