@@ -21,7 +21,7 @@ while (number >= 1000)
 if (number >= 100 && number < 1000)
 {
     int result = number % 10;
-    System.Console.WriteLine($"третья цифра введенного 
+    System.Console.WriteLine($"третья цифра введенного числа {result}");
 }
 else
 {
