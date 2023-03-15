@@ -1,10 +1,9 @@
-﻿//Задача 3: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет. . Не использовать строки
+//Задача 15: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 
-// 645 -> 5
+//6 -> да
+//7 -> да
+//1 -> нет
 
-// 78 -> третьей цифры нет
-
-// 32679 -> 6
 int Prompt(string message)
 {
     System.Console.Write($"{message} >");
@@ -12,17 +11,17 @@ int Prompt(string message)
     return answer;
 }
 
-int number = Prompt("Введите число");
-while (number >= 1000)
+int number = Prompt("Введите число дня недели");
+
+if (number >8)
 {
-    number = number / 10;
+    System.Console.WriteLine($"данное число не является днем недели");
 }
-if (number >= 100 && number < 1000)
+if (number <=7 && number >5)
 {
-    int result = number % 10;
-    System.Console.WriteLine($"третья цифра введенного числа {result}");
+    System.Console.WriteLine($"данное число является выходным днем недели");
 }
-else
+if (number <6 && number >0)
 {
-    System.Console.WriteLine("третьей цифры нет");
+    System.Console.WriteLine($"данное число не является выходным днем недели");
 }
